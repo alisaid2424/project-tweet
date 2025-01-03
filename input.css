@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link-active {
+    @apply flex justify-center items-center lg:justify-start text-blue-400;
+  }
+  .link {
+    @apply flex justify-center items-center lg:justify-start text-gray-800 dark:text-white
+     hover:text-blue-400 dark:hover:text-blue-400 mb-8;
+  }
+  .icon {
+    @apply hidden font-bold lg:ml-4 lg:block;
+  }
+
+  .link-user {
+    @apply lg:w-full rounded-full mx-auto mt-auto p-2 lg:py-2 lg:px-3 flex items-center justify-between mb-5 cursor-pointer bg-gray-200 dark:bg-dim-200;
+  }
+  .sticky-header {
+    @apply flex items-center justify-between px-4 py-3 sticky top-0 border-b border-gray-700 dark:border-gray-400 cursor-pointer bg-white dark:bg-dim-900;
+  }
+
+  .tweet-box-input {
+    @apply w-full p-2 h-16 text-gray-800 dark:text-white bg-transparent focus:outline-none  font-normal;
+  }
+  .link-tweetbox {
+    @apply p-2 rounded-full text-xs text-blue-400;
+  }
+
+  .btn {
+    @apply rounded-full bg-blue-400 text-white font-bold flex items-center justify-center 
+     text-sm hover:bg-blue-500 transition ease-in-out duration-300;
+  }
+  .border-buttom {
+    @apply border-b border-gray-700 dark:border-dim-200;
+  }
+  .search-twitter i {
+    @apply text-gray-600 absolute left-4 top-1/2 -translate-y-1/2 cursor-pointer;
+  }
+  .search-twitter input {
+    @apply w-full bg-gray-100 dark:bg-dim-400 text-gray-800 dark:text-white font-medium text-sm rounded-full focus:outline-none  
+    pl-12 h-9;
+  }
+}
+
+@layer utilities {
+  /* width scrollbar*/
+  ::-webkit-scrollbar,
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /*Handle Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  /*Handle Track */
+  .dark ::-webkit-scrollbar-track {
+    background: #374151;
+  }
+
+  /* Handle thumb*/
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border: 2px solid #fff;
+  }
+
+  /* Handle thumb*/
+  .dark ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border: 2px solid #374151;
+  }
+}
